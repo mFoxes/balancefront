@@ -1,0 +1,52 @@
+@import "../../styles/font_styles";
+
+.contactus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contactus__title {
+        margin-bottom: 47px;
+        @media (max-width: 410px) {
+            width: calc(360px * 0.8);
+        }
+
+        width: 360px;
+        @include Prata28Style;
+
+        text-align: center;
+    }
+
+    .contactus__input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.modal__contactus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 410px) {
+        width: calc(461px * 0.7);
+    }
+    width: 461px;
+
+    .contactus {
+        &__title {
+            @include MondaStyle;
+            text-align: center;
+            width: 100%;
+
+            color: #393939;
+        }
+
+        &__input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+    }
+}

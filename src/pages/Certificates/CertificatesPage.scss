@@ -1,0 +1,73 @@
+@import "../../styles/font_styles";
+@import "../../styles/variables";
+
+.page-certificates {
+    padding: 0;
+
+    // .page-certificates__bg
+    &__bg {
+        padding-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .page-certificates__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .page-certificates__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 120px 0 0;
+        align-items: center;
+    }
+}
+.page-certificates {
+    // .page-certificates__title
+    &__title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0 40px;
+
+        border-top: 1px solid $mainColorBlack;
+    }
+
+    // .page-certificates__text
+    &__text {
+        @include Prata28Style;
+        color: $titleColor;
+    }
+
+    // .page-certificates__square
+    &__square {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: $mainColorBlack;
+    }
+
+    // .page-certificates__card
+    &__card {
+        display: flex;
+        margin: 0 0 40px 0;
+        @media (min-width:$pc){
+            padding: 0;
+            justify-content: space-around;
+            align-items: center;
+            // flex-wrap: wrap;
+        }
+        width: 100%;
+        @media (max-width: $maxWidthContainer) {
+            width: calc(100vw - $containerPadding);
+        }
+        height: 100%;
+        gap: 20px;
+    }
+}

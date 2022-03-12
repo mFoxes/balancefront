@@ -1,0 +1,14 @@
+
+.swiper {
+    &-wrapper {
+        margin-bottom: 40px;
+    }
+
+    &-slide {
+        width: fit-content;
+    }
+
+    &-pagination-bullet-active {
+        background-color: black;
+    }
+}

@@ -1,0 +1,36 @@
+@import "../../styles/font_styles";
+
+/* certificate card */
+.certificates__card {
+    @media (max-width: 450px) {
+        width: calc(416px * 0.65);
+        height: 100%;
+    }
+    width: 416px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    //margin-right: 24px;
+
+    img {
+        @media (max-width: 450px) {
+            width: calc(416px * 0.65);
+            height: calc(580px * 0.65);
+        }
+        width: 416px;
+        height: 580px;
+    }
+
+    p {
+        font-family: Montserrat, sans-serif;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #393939;
+    }
+}

@@ -1,0 +1,130 @@
+@import "../../styles/font_styles";
+@import "../../styles/variables";
+
+.page {
+    // .page__body
+    &__body {
+    }
+}
+.page-contacts {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    @media (max-width: $tablet) {
+        padding: 60px 0;
+    }
+    // .page-contacts__container
+    &__container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        display: flex;
+        align-items: center;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        gap: 20px;
+    }
+
+    // .page-contacts__body
+    &__body {
+        flex: 1 0 48%;
+        color: $mainColorBlack;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    // .page-contacts__nav
+    &__nav {
+        display: flex;
+        align-items: center;
+        @media (max-width: $tablet) {
+            justify-content: center;
+        }
+        gap: 20px;
+    }
+
+    // .page-contacts__square
+    &__square {
+        flex: 0 0 8px;
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: $mainColorBlack;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .page-contacts__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $tablet) {
+            align-items: center;
+        }
+        gap: 45px;
+    }
+
+    // .page-contacts__title
+    &__title {
+        @include RobotoBoldStyle;
+    }
+
+    // .page-contacts__address
+    &__address {
+        p:nth-child(1) {
+            @include MontserratItalicStyle;
+            font-weight: normal;
+            font-size: 24px;
+        }
+        p:nth-child(2) {
+            @include Montserrat16Style;
+        }
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $tablet) {
+            align-items: center;
+        }
+        gap: 20px;
+    }
+
+    // .page-contacts__connect
+    &__connect {
+        p:nth-child(1) {
+            @include MontserratItalicStyle;
+            font-weight: normal;
+            font-size: 24px;
+        }
+        a {
+            @include Montserrat16Style;
+        }
+        p:nth-child(2) {
+            @include Montserrat16Style;
+            color: rgba(51, 51, 51, 0.75);
+        }
+
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $tablet) {
+            align-items: center;
+        }
+        gap: 20px;
+    }
+
+    // .page-contacts__links
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+}

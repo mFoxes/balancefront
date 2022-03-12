@@ -1,0 +1,103 @@
+
+
+@mixin RobotoBoldStyle {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    color: #393939;
+}
+
+@mixin MondaStyle {
+    font-family: Monda, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+}
+
+@mixin MontserratItalicStyle {
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 130%;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+@mixin Montserrat14Style {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+@mixin Montserrat16Style {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+@mixin Montserrat24Style {
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130%;
+
+    letter-spacing: 0.05em;
+}
+
+@mixin Prata28Style {
+    font-family: Prata, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    color: #65796D;
+}
+
+@mixin Prata36Style {
+    font-family: Prata, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #65796D;
+}
+
+@mixin Prata48Style {
+    font-family: Prata, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+@mixin Prata64Style {
+    font-family: Prata, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}

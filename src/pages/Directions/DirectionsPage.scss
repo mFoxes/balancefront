@@ -1,0 +1,78 @@
+@import "../../styles/font_styles";
+@import "../../styles/variables";
+
+.page-direct {
+    padding: 46px 0 74px;
+
+    // .page-body__bg
+    &__bg {
+        width: 100%;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:nth-child(2n + 1) {
+            .page-direct__content {
+                flex-direction: row-reverse;
+                justify-content: start;
+                @media (max-width: $mobile) {
+                    flex-direction: column;
+                }
+            }
+            background: #f2f2f2;
+        }
+    }
+
+    // .page-body__container
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .page-body__content
+    &__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 130px;
+        @media (max-width: $maxWidthContainer) {
+            width: calc(100vw - $containerPadding);
+        }
+        @media (max-width: $tablet) {
+            gap: 80px;
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        padding: 74px 0 46px;
+    }
+}
+.content-direct {
+    // .content-direct__left
+    &__left {
+        height: fit-content;
+        flex: 1 0 42%;
+    }
+}
+.left-direct {
+    // .left-direct__title
+    &__title {
+        @include Prata36Style;
+        color: $titleColor;
+        @media (max-width:$mobile){
+            text-align: center;
+        }
+        margin-bottom: 45px;
+    }
+
+    // .left-direct__text
+    &__text {
+        @include Montserrat16Style;
+        color: $mainColorBlack;
+    }
+}

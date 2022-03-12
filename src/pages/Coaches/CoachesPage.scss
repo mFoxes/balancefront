@@ -1,0 +1,83 @@
+@import "../../styles/font_styles";
+@import "../../styles/variables";
+
+.page-coaches {
+    
+    // .page-coaches__bg
+    &__bg {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .padge-body__container
+    &__container {
+        width: 100%;
+        @media (max-width: $maxWidthContainer) {
+            width: calc(100vw - $containerPadding);
+        }
+        height: 100%;
+    }
+
+    // .padge-body__content
+    &__content {
+        padding: 120px 0;
+        @media (max-width:$mobile){
+             padding: 80px 0; 
+        }
+    }
+}
+
+//==========================================================================================================
+
+.content-coaches {
+    // .content-coaches__title
+    &__title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0 40px;
+
+        border-top: 1px solid $mainColorBlack;
+    }
+
+    // .content-coaches__text
+    &__text {
+        @include Prata28Style;
+        color: $titleColor;
+    }
+
+    // .content-coaches__square
+    &__square {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: $mainColorBlack;
+    }
+
+    // .content-coaches__card
+    &__card {
+        // max-width: 400px;
+        flex: 1 1 100%;
+        display: flex;
+        margin: 0 0 40px 0;
+        @media (min-width:$pc){
+            padding: 0;
+            justify-content: space-around;
+            align-items: center;
+            // flex-wrap: wrap;
+        }
+        gap: 10px;
+    }
+}
+
+//==========================================================================================================
+
+
+//==========================================================================================================
+
+
+//==========================================================================================================

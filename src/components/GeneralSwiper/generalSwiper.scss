@@ -1,0 +1,202 @@
+@import "../../styles/variables";
+
+/* public page */
+.Swiper {
+    &__public {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        height: 965px;
+        @media (max-width: $tablet) {
+            height: 100vh;
+        }
+
+        &::after {
+            z-index: 2;
+            pointer-events: none;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.4), rgb(51, 51, 51, 0.35));
+        }
+
+        .swiper {
+            &-button-prev,
+            &-button-next {
+                display: none;
+            }
+            &-pagination {
+                z-index: 10;
+                display: flex;
+            }
+
+            &-pagination {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                left: auto;
+                top: 0;
+                right: 10%;
+                width: fit-content;
+                gap: 20px;
+    
+                @media (max-width: $mobile) {
+                    flex-direction: row;
+                    width: auto;
+                    top: auto;
+                    bottom: 10%;
+                    right: 0;
+                    left: 0;
+                }
+    
+                &-bullet {
+                    position: relative;
+                    box-sizing: content-box;
+                    flex: 0 1 auto;
+                    width: 10px;
+                    height: 10px;
+                    padding: 0;
+    
+                    margin: 10px 0;
+    
+                    cursor: pointer;
+                    background-color: #ffffff;
+                    background-clip: padding-box;
+                    border: 5px rgb(0, 0, 0, 0) solid;
+                    opacity: 1;
+                    transition: opacity 0.5s ease;
+                    border-radius: 50%;
+    
+                    &::after {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transform: translate(5px, -5px);
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        border: 1px rgb(0, 0, 0, 0) solid;
+                        opacity: 1;
+                        border-radius: 50%;
+                        transition: border 0.3s linear;
+                    }
+    
+                    &-active::after {
+                        border: 1px #ffffff solid;
+                    }
+                }
+            }
+        }
+        &-button {
+            &-prev,
+            &-next {
+                height: 100%;
+                top: 0;
+                right: 0;
+                width: 10%;
+                margin-top: 0;
+                opacity: 0;
+            }
+
+            &-prev {
+                left: 0;
+                @media (min-width: $mobile) {
+                    margin-left: 100px;
+                }
+            }
+        }
+        
+    }
+
+    /* other page */
+    &__other {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        height: 625px;
+
+        &::after {
+            z-index: 3;
+            pointer-events: none;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(51, 51, 51, 0.75);
+        }
+
+        .swiper {
+            &-button-prev,
+            &-button-next,
+            &-pagination {
+                z-index: 3;
+                display: none;
+            }
+        }
+    }
+
+    &__contacts {
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: auto;
+            object-fit: cover;
+            height: 820px;
+        }
+
+        .swiper {
+            &-button-prev,
+            &-button-next,
+            &-pagination {
+                display: none;
+            }
+        }
+    }
+
+    &__public,
+    &__other,
+    &__contacts {
+        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0;
+        }
+        .swiper {
+            &-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            
+        }
+    }
+}

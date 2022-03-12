@@ -1,0 +1,264 @@
+@import "font_styles";
+@import "variables";
+
+/* app */
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* header */
+.header {
+    height: 75px;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $mainColor;
+    position: relative;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__logo {
+        display: none;
+        @media (max-width: $tablet) {
+            display: block;
+        }
+
+        width: 100%;
+        svg {
+            width: 255px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    color: $mainColorBlack;
+
+    &__icon {
+    }
+
+    &__body {
+        z-index: 105;
+        display: flex;
+        @media (max-width: $tablet) {
+            display: block;
+            overflow: hidden;
+
+            position: absolute;
+            top: 75px;
+            left: 0;
+
+            height: 0;
+            width: 100vw;
+            padding: 40px 15px;
+            opacity: 0;
+
+            background-color: rgba(242, 242, 242, 0.95);
+
+            transition: all 0.4s linear;
+
+            .menu-open & {
+                height: 100vh;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__list {
+        @include MontserratItalicStyle;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 35px;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            font-size: 20px;
+            gap: 30px;
+        }
+        padding-left: 0;
+
+        margin-bottom: 0;
+    }
+
+    &__item {
+    }
+}
+
+//Burger
+.icon-menu {
+    display: none;
+    @media (max-width: $tablet) {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 5;
+        span,
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: $mainColorBlack;
+            border-radius: 2px;
+        }
+        &::before {
+            top: 0px;
+        }
+        &::after {
+            bottom: 0px;
+        }
+        span {
+            top: calc(50% - 2px);
+        }
+        .menu-open & {
+            span {
+                transform: scale(0);
+            }
+            &::before {
+                transform: rotate(-45deg);
+                top: calc(50% - 2px);
+            }
+            &::after {
+                transform: rotate(45deg);
+                bottom: calc(50% - 2px);
+            }
+        }
+    }
+}
+
+/* body */
+.app__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+/* footer */
+.footer {
+    background-color: #393939;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        hr {
+            size: 1px;
+            width: 80%;
+            background-color: #ffffff;
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+
+        margin: 40px 0;
+        gap: 40px;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        a {
+            @include MontserratItalicStyle;
+            text-align: center;
+        }
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    &__brow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 60px 0;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+
+        gap: 30px;
+    }
+
+    &__society {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    &__address {
+        @media (min-width: $mobile) {
+            flex: 0 0 300px;
+        }
+        @include Montserrat16Style;
+        color: #ffffff;
+        text-align: right;
+    }
+
+    &__tel {
+        @media (min-width: $mobile) {
+            flex: 0 0 300px;
+        }
+        &:hover {
+            color: #ffffff;
+        }
+        @include MontserratItalicStyle;
+    }
+
+    &__sign {
+        width: 280px;
+        @include Montserrat14Style;
+        text-align: center;
+        color: #ffffff;
+
+        margin-bottom: 60px;
+    }
+}

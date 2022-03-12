@@ -1,0 +1,64 @@
+@import "../../styles/font_styles";
+
+/* global card reviews style */
+.cardReview {
+    position: relative;
+    @media (max-width: 390px) {
+        width: calc(362px * 0.85);
+        height: 365px;
+    }
+    width: 362px;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //margin-right: 30px;
+    &__img {
+        position: absolute;
+        width: 126px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px #393939 solid;
+        object-fit: cover;
+    }
+    &__block {
+        background-color: #393939;
+        @media (max-width: 390px) {
+            width: calc(362px * 0.85);
+            height: 305px;
+        }
+        width: 362px;
+        height: 305px;
+        margin-top: 60px;
+    }
+}
+
+.block {
+    &__text {
+        margin: 63px 22px 22px;
+    }
+
+    &__name {
+        @include Montserrat24Style;
+        color: #ffffff;
+
+        @media (max-width: 360px) {
+            font-size: 18px;
+        }
+        font-size: 24px;
+
+        margin: 0 0 27px 0;
+    }
+
+    &__rev {
+        @include Montserrat16Style;
+        color: #ffffff;
+        @media (min-width: 360px) {
+            font-size: 14px;
+        }
+        font-size: 16px;
+
+        margin: 0;
+    }
+}

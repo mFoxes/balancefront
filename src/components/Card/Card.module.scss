@@ -1,0 +1,139 @@
+@import "../../styles/font_styles";
+
+/* Global style */
+.card__content {
+    position: relative;
+    background-color: #333333;
+
+    :hover {
+        opacity: 1;
+    }
+}
+
+/* Title */
+.card__title {
+    @include Montserrat24Style;
+    color: #65796d;
+
+    margin: 30px 0 0 0;
+}
+
+/* Card with image */
+.card__img {
+}
+
+.content {
+    &__img {
+        display: block;
+        @media (max-width: 430px) {
+            width: calc(416px * 0.7);
+            height: calc(100% * 0.7);
+        }
+    }
+
+    /* Image text */
+    &__table {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 416px;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        background-color: rgba(51, 51, 51, 0.75);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 40px;
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: flex;
+                gap: 17px;
+                min-height: 47px;
+                @include Montserrat16Style;
+
+                &::before {
+                    content: "";
+                    flex: 0 0 18px;
+                    height: 4px;
+                    background: #ffffff;
+                    margin: 7px 0;
+                }
+            }
+        }
+    }
+}
+
+/* Card with video */
+.card__video {
+    @media (max-width: 460px) {
+        width: calc(600px * 0.5);
+        height: 100%;
+    }
+    @media (max-width: 640px) {
+        width: calc(600px * 0.7);
+        height: 100%;
+    }
+    width: 600px;
+    height: 100%;
+
+    .card__title {
+        @include Montserrat24Style;
+        @media (max-width: 460px) {
+            font-size: 18px;
+        }
+        font-size: 24px;
+        color: #ffffff;
+    }
+}
+
+.content__video {
+    display: block;
+    @media (max-width: 600px) {
+        width: calc(600px * 0.5);
+        height: 100%;
+    }
+    @media (max-width: 640px) {
+        width: calc(636px * 0.7);
+        height: 100%;
+    }
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video__button {
+    @media (min-width: 460px) {
+        width: calc(120px * 0.6);
+        height: calc(120px * 0.6);
+    }
+    @media (min-width: 640px) {
+        width: calc(120px * 0.7);
+        height: calc(120px * 0.7);
+    }
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0, 0);
+    transition: visibility 0.5s ease, opacity 0.5s ease;
+
+    img {
+        width: 100%;
+        height: 100%;
+        visibility: inherit;
+    }
+}

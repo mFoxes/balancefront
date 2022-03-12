@@ -1,0 +1,40 @@
+
+.Map {
+    $map_width: 544px;
+    $map_height: 424px;
+    @media (max-width: 376px) {
+        width: calc(#{$map_width} * 0.55);
+        height: calc(#{$map_height} * 0.55);
+    }
+    @media (max-width: 460px) {
+        width: calc(#{$map_width} * 0.7);
+        height: calc(#{$map_height} * 0.7);
+    }
+    @media (max-width: 560px) {
+        width: calc(#{$map_width} * 0.8);
+        height: calc(#{$map_height} * 0.8);
+    }
+    width: #{$map_width};
+    height: #{$map_height};
+    border: 0;
+}
+
+.Map__contacts {
+    $map_width: 636px;
+    $map_height: 580px;
+    @media (max-width: 450px) {
+        width: calc(#{$map_width} * 0.50);
+        height: calc(#{$map_height} * 0.50);
+    }
+    @media (max-width: 550px) {
+        width: calc(#{$map_width} * 0.6);
+        height: calc(#{$map_height} * 0.6);
+    }
+    @media (max-width: 650px) {
+        width: calc(#{$map_width} * 0.7);
+        height: calc(#{$map_height} * 0.7);
+    }
+    width: #{$map_width};
+    height: #{$map_height};
+    border: 0;
+}
